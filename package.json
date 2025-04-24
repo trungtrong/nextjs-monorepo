@@ -15,7 +15,13 @@
     "nx:reset": "npx nx reset",
     "nx:sync": "npx nx sync",
     "// - LINT": "Check Code Rule",
-    "lint": "next lint"
+    "lint:fix": "nx lint --fix=true",
+    "lint:react-store": "nx lint react-store",
+    "lint:react-store:fix": "nx lint react-store --fix=true",
+    "// - FORMAT": "Format Code",
+    "prettier:fix:all": "npx nx format:write --all",
+    "prettier:fix:react-store:": "npx nx format:write --projects react-store",
+    "format:all": "npm run prettier:fix:all && npm run lint:fix"
   },
   "private": true,
   "dependencies": {
