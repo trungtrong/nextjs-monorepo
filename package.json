@@ -43,9 +43,12 @@
         "@nx/js": "20.8.0",
         "@nx/next": "20.8.0",
         "@nx/react": "20.8.0",
+        "@nx/rollup": "20.8.0",
         "@nx/vite": "20.8.0",
         "@nx/web": "20.8.0",
         "@nx/workspace": "20.8.0",
+        "@rollup/plugin-url": "^8.0.2",
+        "@svgr/rollup": "^8.1.0",
         "@swc-node/register": "~1.9.1",
         "@swc/cli": "~0.6.0",
         "@swc/core": "~1.5.7",
@@ -61,6 +64,7 @@
         "@vitest/ui": "^3.0.0",
         "autoprefixer": "10.4.13",
         "babel-jest": "^29.7.0",
+        "core-js": "^3.36.1",
         "cross-env": "^7.0.3",
         "cypress": "^14.2.1",
         "eslint": "^9.8.0",
@@ -78,17 +82,32 @@
         "nx": "20.8.0",
         "postcss": "8.4.38",
         "prettier": "^2.6.2",
+        "rollup": "^4.14.0",
         "tailwindcss": "3.4.3",
         "ts-jest": "^29.1.0",
         "ts-node": "10.9.1",
         "tslib": "^2.3.0",
         "typescript": "~5.7.2",
         "typescript-eslint": "^8.19.0",
+        "verdaccio": "^6.0.5",
         "vite": "^6.0.0",
         "vitest": "^3.0.0"
     },
     "workspaces": [
         "apps/*",
         "libs/*"
-    ]
+    ],
+    "nx": {
+        "includedScripts": [],
+        "targets": {
+            "local-registry": {
+                "executor": "@nx/js:verdaccio",
+                "options": {
+                    "port": 4873,
+                    "config": ".verdaccio/config.yml",
+                    "storage": "tmp/local-registry/storage"
+                }
+            }
+        }
+    }
 }
