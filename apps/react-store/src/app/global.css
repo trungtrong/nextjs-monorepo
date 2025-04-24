@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.app-container {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100%;
+}
+
+
 html {
   -webkit-text-size-adjust: 100%;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,

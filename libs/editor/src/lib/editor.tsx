@@ -1,6 +1,6 @@
 export function Editor() {
     return (
-        <div className={styles['container']}>
+        <div className={'container'}>
             <h1>Welcome to Editor!</h1>
         </div>
     );
