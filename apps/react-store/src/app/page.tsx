@@ -1,3 +1,5 @@
+import environment from '@/environments';
+
 export default function Index() {
   /*
    * Replace the elements below with your own.
@@ -10,7 +12,7 @@ export default function Index() {
         <div className="container">
           <div id="welcome">
             <h1>
-              <span> Hello there, </span>
+              <span> Hello there, {environment.ENV_NAME}</span>
               Welcome react-store 👋
             </h1>
           </div>

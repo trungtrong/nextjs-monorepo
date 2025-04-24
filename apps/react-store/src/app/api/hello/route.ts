@@ -1,3 +1,6 @@
+import environment from '@/environments';
+
 export async function GET(request: Request) {
-  return new Response('Hello, from API!');
+    console.log(environment)
+  return new Response('Hello, from API! ' + environment.ENV_NAME);
 }

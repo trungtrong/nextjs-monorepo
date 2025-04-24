@@ -2,6 +2,8 @@
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { composePlugins, withNx } = require('@nx/next');
+const envConfig = require('./env.json');
+const environment = process.env.TARGET_ENV || process.env.NODE_ENV;
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
@@ -12,6 +14,7 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  env: envConfig[environment],
 };
 
 const plugins = [
