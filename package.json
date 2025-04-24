@@ -96,7 +96,8 @@
     },
     "workspaces": [
         "apps/*",
-        "libs/*"
+        "libs/*",
+        "libs/shared/*"
     ],
     "nx": {
         "includedScripts": [],

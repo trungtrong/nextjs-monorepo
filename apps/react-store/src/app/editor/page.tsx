@@ -3,7 +3,7 @@ import axios from 'axios';
 const EditorPage = async () => {
     return (
         <div className="max-w-96 mx-5 md:mx-auto flex flex-col gap-3">
-            <h1 className="text-5xl mx-auto w-fit h-fit">Editor</h1>
+            <h1 className="text-5xl mx-auto w-fit h-fit button-red">Editor</h1>
         </div>
     );
 

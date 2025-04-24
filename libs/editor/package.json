@@ -17,5 +17,13 @@
     "files": [
         "dist",
         "!**/*.tsbuildinfo"
-    ]
+    ],
+    "nx": {
+        "projectType": "library",
+        "sourceRoot": "libs/editor",
+        "tags": [
+            "type:feature",
+            "scope:editor"
+        ]
+    }
 }

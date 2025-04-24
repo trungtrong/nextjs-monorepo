@@ -1,5 +1,5 @@
 {
-    "name": "@nextjs-monorepo/articles",
+    "name": "@nextjs-monorepo/styles",
     "version": "0.0.1",
     "main": "./src/index.ts",
     "types": "./src/index.ts",
@@ -13,10 +13,10 @@
     },
     "nx": {
         "projectType": "library",
-        "sourceRoot": "libs/articles",
+        "sourceRoot": "libs/shared/styles/src",
         "tags": [
-            "type:feature",
-            "scope:articles"
+            "type:ui",
+            "scope:shared"
         ]
     }
 }
