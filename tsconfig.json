@@ -20,6 +20,12 @@
         },
         {
             "path": "./libs/shared/assets"
+        },
+        {
+            "path": "./libs/shared/core"
+        },
+        {
+            "path": "./libs/shared/utils"
         }
     ]
 }

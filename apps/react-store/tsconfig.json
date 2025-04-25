@@ -1,58 +1,57 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "jsx": "preserve",
-    "noEmit": true,
-    "emitDeclarationOnly": false,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "jsx": "preserve",
+        "noEmit": true,
+        "emitDeclarationOnly": false,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "incremental": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "types": ["jest", "node"],
+        "outDir": "dist",
+        "rootDir": "src",
+        "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
     },
-    "types": [
-      "jest",
-      "node"
+    "include": [
+        "../../apps/react-store/.next/types/**/*.ts",
+        "../../dist/apps/react-store/.next/types/**/*.ts",
+        "next-env.d.ts",
+        "src/**/*.js",
+        "src/**/*.jsx",
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        ".next/types/**/*.ts"
     ],
-    "outDir": "dist",
-    "rootDir": "src",
-    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
-  },
-  "include": [
-    "../../apps/react-store/.next/types/**/*.ts",
-    "../../dist/apps/react-store/.next/types/**/*.ts",
-    "next-env.d.ts",
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "out-tsc",
-    "dist",
-    "node_modules",
-    "jest.config.ts",
-    "src/**/*.spec.ts",
-    "src/**/*.test.ts",
-    ".next",
-    "eslint.config.js",
-    "eslint.config.cjs",
-    "eslint.config.mjs"
-  ]
+    "exclude": [
+        "out-tsc",
+        "dist",
+        "node_modules",
+        "jest.config.ts",
+        "src/**/*.spec.ts",
+        "src/**/*.test.ts",
+        ".next",
+        "eslint.config.js",
+        "eslint.config.cjs",
+        "eslint.config.mjs"
+    ],
+    "references": [
+        {
+            "path": "../../libs/shared/core/tsconfig.lib.json"
+        },
+        {
+            "path": "../../libs/shared/utils/tsconfig.lib.json"
+        },
+    ]
 }
