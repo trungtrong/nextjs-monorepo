@@ -1,18 +1,11 @@
-import { motion } from 'framer-motion';
 import { memo } from 'react';
 
 const ErrorBoundaryFallback = () => {
     return (
         <div className="grid items-center justify-center h-100vh p-24px md:p-64px overflow-auto">
             <div className="flex flex-col items-center justify-center text-center gap-24px">
-                <motion.div
+                <div
                     className="w-full max-w-3xl"
-                    initial={{ opacity: 0, scale: 0.6 }}
-                    animate={{
-                        opacity: 1,
-                        scale: 1,
-                        transition: { delay: 0.1 },
-                    }}
                 >
                     <svg
                         width="100%"
@@ -276,14 +269,12 @@ const ErrorBoundaryFallback = () => {
                             </clipPath>
                         </defs>
                     </svg>
-                </motion.div>
+                </div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
+                <div
                 >
                     <h3 className="text-center">Oops! Something went wrong.</h3>
-                </motion.div>
+                </div>
 
                 <button
                     onClick={() =>

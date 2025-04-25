@@ -1,5 +1,5 @@
 {
-    "name": "@nextjs-monorepo/assets",
+    "name": "@nextjs-monorepo/store",
     "version": "0.0.1",
     "main": "./src/index.ts",
     "types": "./src/index.ts",
@@ -12,11 +12,11 @@
         "./package.json": "./package.json"
     },
     "nx": {
-        "projectType": "library",
-        "sourceRoot": "libs/shared/ui/src",
-        "tags": [
-            "type:ui",
-            "scope:shared"
-        ]
+      "projectType": "library",
+      "sourceRoot": "libs/shared/store/src",
+      "tags": [
+        "type:data-access",
+        "scope:shared"
+      ]
     }
 }

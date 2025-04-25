@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Refer to:
  * + https://codedrivendevelopment.com/posts/dependency-injection-in-react

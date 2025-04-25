@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactNode, useEffect, useState } from 'react';
 import { InjectorContext } from './InjectorContext';
 import { Injector } from './injector';
@@ -14,7 +16,7 @@ export const InjectorContextProvider = (props: IInjectorProviderProps) => {
         injector.registers(props.services)
         return injector;
     });
-    
+
     useEffect(() => {
         return () => {
             // eslint-disable-next-line react-hooks/exhaustive-deps
