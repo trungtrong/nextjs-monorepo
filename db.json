@@ -1,0 +1,16 @@
+{
+  "signin": {
+    "clientId": "94616747373-4g4t1saell84altuuk28bqbj08buvcnq.apps.googleusercontent.com",
+    "client_id": "94616747373-4g4t1saell84altuuk28bqbj08buvcnq.apps.googleusercontent.com",
+    "select_by": "btn"
+  },
+  "usersInfo": {
+    "isLoggedIn": true,
+    "avatar": "",
+    "authority": []
+  },
+  "user": {
+    "avatar": "",
+    "authority": []
+  }
+}

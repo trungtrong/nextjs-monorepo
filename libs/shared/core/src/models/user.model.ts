@@ -6,6 +6,7 @@ export interface IUser {
 }
 
 export interface IUserLoggedIn extends IUser {
+    isLoggedIn: boolean;
     authority?: string[]; // Roles
 }
 

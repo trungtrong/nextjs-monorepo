@@ -1,3 +1,1 @@
-export function ProtectedRouteGuard () {
-  return true;
-}
+export * from './ServerSideRouteGuard';

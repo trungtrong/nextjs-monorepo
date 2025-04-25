@@ -4,7 +4,7 @@
     "license": "MIT",
     "scripts": {
         "dev": "nx dev -p 3000",
-        "start:react-store": "cross-env TARGET_ENV=local nx dev react-store -p 3000",
+        "start:react-store": "cross-env TARGET_ENV=local NODE_OPTIONS='--inspect' nx dev react-store -p 3000",
         "// - BUILDING": "Build Application Based On Environment",
         "build": "nx build --no-lint",
         "build:react-store:dev": "cross-env TARGET_ENV=development nx build react-store",
@@ -14,6 +14,8 @@
         "nx:graph": "npx nx graph --watch",
         "nx:reset": "npx nx reset",
         "nx:sync": "npx nx sync",
+        "// - Mock API": "Mock API",
+        "json-server": "json-server --routes routes.json --watch db.json --port 8081",
         "// - LINT": "Check Code Rule",
         "lint:fix": "nx lint --fix=true",
         "lint:react-store": "nx lint react-store",
@@ -29,7 +31,8 @@
         "classnames": "^2.5.1",
         "next": "~15.2.4",
         "react": "19.0.0",
-        "react-dom": "19.0.0"
+        "react-dom": "19.0.0",
+        "rxjs": "^7.8.1"
     },
     "devDependencies": {
         "@babel/core": "^7.14.5",
@@ -81,6 +84,7 @@
         "jest-environment-jsdom": "^29.7.0",
         "jiti": "2.4.2",
         "jsdom": "~22.1.0",
+        "json-server": "^0.17.4",
         "nx": "20.8.0",
         "postcss": "8.4.38",
         "prettier": "^2.6.2",
